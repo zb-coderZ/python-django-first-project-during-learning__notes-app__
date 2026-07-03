@@ -1,0 +1,97 @@
+{% load static tailwind_tags %}
+{% load django_browser_reload %}
+{% django_browser_reload_script %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Testing Phase of HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% tailwind_css %}
+  </head>
+  <body class="bg-[#f6f7fb] text-gray-900 antialiased">
+
+    <!-- TOP NAV (glass + clean SaaS style) -->
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/70 backdrop-blur-xl">
+    
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+            <!-- LOGO -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white font-bold shadow-md">
+                    📝
+                </div>
+    
+                <div>
+                    <h1 class="text-lg font-semibold leading-tight">Notes App</h1>
+                    <p class="text-xs text-gray-500">Organize ideas with clarity</p>
+                </div>
+            </div>
+    
+            <!-- NAV LINKS -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="/" class="hover:text-gray-900 transition">Home</a>
+                <a href="/about/" class="hover:text-gray-900 transition">About</a>
+                <a href="/contact/" class="hover:text-gray-900 transition">Contact</a>
+            </nav>
+    
+            <!-- RIGHT ACTION -->
+            <div class="hidden md:flex items-center gap-3">
+                <button class="px-4 py-2 text-sm rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition">
+                    New Note
+                </button>
+            </div>
+    
+        </div>
+    </header>
+    
+    
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+    
+        <!-- HERO -->
+        <section class="mb-10">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
+                Capture ideas. Stay organized.
+            </h2>
+            <p class="text-gray-500 mt-2 max-w-2xl">
+                A clean workspace to store your notes, thoughts, and daily ideas without distraction.
+            </p>
+        </section>
+    
+        <!-- CONTENT CARD -->
+        <section class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    
+            <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+                <h3 class="font-semibold text-gray-800">Your Notes</h3>
+                <span class="text-xs text-gray-500">Latest updates</span>
+            </div>
+    
+            <div class="p-6">
+                {% block content %}
+                {% endblock %}
+            </div>
+    
+        </section>
+    
+    </main>
+    
+    
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-200 bg-white mt-16">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+    
+            <p>© 2026 Notes App</p>
+    
+            <p class="text-gray-400">
+                Built with Django + Tailwind • Minimal SaaS UI
+            </p>
+    
+        </div>
+    </footer>
+    
+    </body>
+   
+</html>

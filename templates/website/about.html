@@ -1,0 +1,87 @@
+{% extends "layout.html" %} 
+
+{% block title %}Notes App - About{% endblock %}
+
+{%block content %}
+
+<main class="max-w-5xl mx-auto px-6 py-14 space-y-14">
+
+  <!-- HERO -->
+  <section class="text-center space-y-4">
+
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+      About Notes App
+    </h1>
+
+    <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+      A beginner-friendly Django project built to understand backend development
+      through real-world structure and clean design.
+    </p>
+
+  </section>
+
+  <!-- CARD SECTION -->
+  <section class="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 space-y-10">
+
+    <!-- PROJECT OVERVIEW -->
+    <div class="space-y-3">
+      <h2 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+        📌 Project Overview
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed">
+        Notes App is a beginner-friendly Django project designed to help understand backend development.
+        It allows users to create, view, and manage notes in a simple and structured way.
+      </p>
+    </div>
+
+    <!-- PURPOSE -->
+    <div class="space-y-3">
+      <h2 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+        🎯 Purpose
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed">
+        The main purpose of this project is to practice Django concepts like URLs, Views,
+        Templates, and Database integration in a real-world style workflow.
+      </p>
+    </div>
+
+    <!-- WHAT YOU LEARN -->
+    <div class="space-y-4">
+
+      <h2 class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+        🚀 What You Will Learn
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-4">
+
+        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 hover:shadow-sm transition">
+          Django project structure
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 hover:shadow-sm transition">
+          Request and response cycle
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 hover:shadow-sm transition">
+          Templates system
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 hover:shadow-sm transition">
+          Static files usage
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-100 bg-gray-50 hover:shadow-sm transition md:col-span-2">
+          CRUD operations (coming soon)
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+{% endblock %}
